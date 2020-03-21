@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            .inputLeft{
+                display: flex;
+                border: 1px solid black;
+                border-right-width: 0px;
+                border-radius: 5px 0 0 5px;
+            }
+            .inputRight{
+                display: flex;
+                border: 1px solid black;
+                border-radius: 0 5px 5px 0;
+
+            }
+            .input{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .button{
+                display: flex;
+                background-color:white;
+                border: none;
+                color: rgb(100, 100, 100);
+                /*margin-top: 5px;
+                margin-bottom: 5px;*/
+            }
+            .button:hover{
+                color: rgb(40, 40, 40);
+            }
+            .task{
+                box-shadow: 0 1px 1px rgb(122, 122, 122);
+                width: 70vw;
+                margin: auto;
+                margin-top: 4px;
+            }
+            output{
+                counter-reset: myCounter;
+            }
+            p::before{
+                counter-increment: myCounter;
+                content: counter(myCounter) " ";
+            }
+        </style>
+        <script>
+            var id = 0;
+            function add(){
+                var task = document.createElement("p");
+                task.className = "task";
+                task.style.listStyle = "decimal";
+                var m = document.createTextNode(document.querySelector("input[type=text]").value + " ");
+                task.appendChild(m);
+                var trash = document.createElement("i");
+                trash.className = "fa fa-trash";
+                var x = document.createElement("button");
+                x.className = "button";
+                x.appendChild(trash);
+                x.id = id.toString();
+                x.onclick = remove;
+                task.id = id.toString();
+                task.appendChild(x);
+                var todo = document.getElementById("todo");
+                todo.appendChild(task);
+                document.querySelector("input[type=text]").value = "";
+                id++;
+            }
+            function remove(){
+                var m = document.getElementById(this.id);
+                var todo = document.getElementById("todo");
+                todo.removeChild(m);
+                return false;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="input">
+                <input type="text" class="inputLeft">
+                <input type="button" value="Добавить" onclick="add()" class="inputRight">
+        </div>
+        <output id ="todo"></output>        
+    </body>
+</html>
