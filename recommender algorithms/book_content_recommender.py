@@ -112,7 +112,7 @@ def recommend_to_client(client_id):
     return best_books
 
 
-a = recommend_to_client(1)
+a = recommend_to_client(0)
 
 print('Recommended books for clients with this id:')
 for item in a:
