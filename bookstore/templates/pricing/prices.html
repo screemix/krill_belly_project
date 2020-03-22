@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Прайсинг</h1>
+    <p class="lead">Вы можете выбрать удобный для себя план: ведь электронные книги это хорошо - они всегда с собой.</p>
+</div>
+  
+  <div class="container">
+    <div class="card-deck mb-3 text-center d-flex">
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-dark">
+          <h4 class="my-0 font-weight-normal text-light">По-старинке</h4>
+        </div>
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title pricing-card-title">Бесплатно</h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>Покупка электронных книг по-одной</li>
+            <li>Доступны все сервисы</li>
+          </ul>
+          <button type="button" class="mt-auto btn btn-lg btn-block btn-outline-dark">Выбрать</button>
+        </div>
+      </div>
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-dark">
+          <h4 class="my-0 font-weight-normal text-light">Книголюб</h4>
+        </div>
+        <div class="card-body d-flex flex-column">
+            <h1 class="card-title pricing-card-title">150 руб<small>/месяц</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Бесплатные 5 книг на ваш выбор каждый месяц</li>
+              <li>Каждый месяц одна книга в подарок от редакции</li>
+              <li>Доступны все сервисы</li>
+            </ul>
+            <button type="button" class="mt-auto btn btn-lg btn-block btn-outline-dark">Выбрать</button>
+        </div>
+      </div>
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-dark">
+          <h4 class="my-0 font-weight-normal text-light">Книжный червь</h4>
+        </div>
+        <div class="card-body d-flex flex-column">
+            <h1 class="card-title pricing-card-title">300 руб<small>/месяц</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Бесплатные 10 книг на ваш выбор каждый месяц</li>
+              <li>Каждый месяц одна книга в подарок от редакции</li>
+              <li>Книги из подборок редакции по специальным ценам</li>
+              <li>Доступны все сервисы</li>
+            </ul>
+            <button type="button" class="mt-auto btn btn-lg btn-block btn-outline-dark">Выбрать</button>
+        </div>
+      </div>
+    </div>
+{% endblock %}

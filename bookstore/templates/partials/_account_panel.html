@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="nav nav-tabs">
+      <nav class="nav d-flex justify-content-between">
+        <a 
+            {% if 'selections' in request.path %}
+            class="nav-link active p-3"
+            {%else%}
+            class="p-3 text-muted" 
+            {% endif%}
+        href="{% url 'selections'%}"
+          >Мои подборки</a
+        >
+        <a 
+            {% if 'wish' in request.path %}
+            class="nav-link active p-3"
+            {%else%}
+            class="p-3 text-muted" 
+            {% endif%} href="{% url 'wish_list'%}"
+          >Список желаний</a
+        >
+        <a 
+            {% if 'cart' in request.path %}
+            class="nav-link active p-3"
+            {%else%}
+            class="p-3 text-muted" 
+            {% endif%} href="{% url 'cart'%}"
+          >Моя корзина</a
+        >
+      </nav>
+    </div>
+  </div>
