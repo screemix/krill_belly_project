@@ -59,7 +59,6 @@ book_list = list(cursor)
 client.close()
 
 adjacency_matrix = [[0 for i in range(len(book_list))] for j in range(len(customer_list))]
-print(adjacency_matrix)
 for c in customer_list:
     for item in c['raiting']:
         if (-1)*(3 - item['grade']) > 0:
