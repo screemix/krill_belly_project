@@ -1,0 +1,100 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block content %}
+{% include 'partials/_profile_cap.html'%}
+    <br />
+
+{% include 'partials/_account_panel.html'%}
+
+    <div class="container">
+    <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col" class="border-0 bg-dark">
+                <div class="py-2 text-uppercase text-light">Товар</div>
+              </th>
+              <th scope="col" class="border-0 bg-dark">
+                <div class="py-2 text-uppercase text-light">Цена</div>
+              </th>
+              <th scope="col" class="border-0 bg-dark">
+                <div class="py-2 text-uppercase text-light">Количество</div>
+              </th>
+              <th scope="col" class="border-0 bg-dark">
+                  <div class="py-2 text-uppercase text-light"></div>
+                </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" class="border-0">
+                <div class="p-2">
+                    <svg class="img-fluid rounded shadow-sm" alt="" width="70" height="70" role="img"><rect width="100%" height="100%" fill="#F45644"/></svg>
+                  <div class="ml-3 d-inline-block align-middle">
+                    <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">"Зулейха открывает глаза" Яхина Г.</a></h5><span class="text-muted font-weight-normal font-italic d-block">Русская классическая и современная литература</span>
+                  </div>
+                </div>
+              </th>
+              <td class="border-0 align-middle"><strong>380.00</strong></td>
+              <td class="border-0 align-middle"><strong>2</strong></td>
+              <td class="border-0 align-middle"><button type="button" class="btn btn-outline-danger">Удалить</button></td>
+            </tr>
+            <tr>
+                <th scope="row" class="border-0">
+                  <div class="p-2">
+                      <svg class="img-fluid rounded shadow-sm" alt="" width="70" height="70" role="img"><rect width="100%" height="100%" fill="#DFA22E"/></svg>
+                    <div class="ml-3 d-inline-block align-middle">
+                      <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">"Черчилль: частная жизнь" Медведев Д.</a></h5><span class="text-muted font-weight-normal font-italic d-block">Биографии. Мемуары.</span>
+                    </div>
+                  </div>
+                </th>
+                <td class="border-0 align-middle"><strong>580.00</strong></td>
+                <td class="border-0 align-middle"><strong>1</strong></td>
+                <td class="border-0 align-middle"><button type="button" class="btn btn-outline-danger">Удалить</button></td>
+            </tr>
+            <tr>
+              <th scope="row" class="border-0">
+                <div class="p-2">
+                    <svg class="img-fluid rounded shadow-sm" alt="" width="70" height="70" role="img"><rect width="100%" height="100%" fill="#B9D44A"/></svg>
+                  <div class="ml-3 d-inline-block align-middle">
+                    <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">"Собачье сердце. Ханский огонь" Булгаков М.</a></h5><span class="text-muted font-weight-normal font-italic d-block">Русская классическая и современная литература</span>
+                  </div>
+                </div>
+              </th>
+              <td class="border-0 align-middle"><strong>430.00</strong></td>
+              <td class="border-0 align-middle"><strong>1</strong></td>
+              <td class="border-0 align-middle"><button type="button" class="btn btn-outline-danger">Удалить</button></td>
+            </tr>
+            <tr>
+                <th scope="row" class="border-0">
+                  <div class="p-2">
+                      <svg class="img-fluid rounded shadow-sm" alt="" width="70" height="70" role="img"><rect width="100%" height="100%" fill="#7AC863"/></svg>
+                    <div class="ml-3 d-inline-block align-middle">
+                      <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">"Эмма Мухина и Тайна танцующей коровы" Роньшин В.</a></h5><span class="text-muted font-weight-normal font-italic d-block">Детская литература</span>
+                    </div>
+                  </div>
+                </th>
+                <td class="border-0 align-middle"><strong>320.00</strong></td>
+                <td class="border-0 align-middle"><strong>1</strong></td>
+                <td class="border-0 align-middle"><button type="button" class="btn btn-outline-danger">Удалить</button></td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+      <div class="container d-flex flex-row-reverse">
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-danger">
+            <input type="radio" name="options" id="option1"> Очистить корзину
+          </label>
+          <label class="btn btn-primary">
+              <input type="radio" name="options" id="option2" checked> Оформить заказ
+            </label>
+        </div>
+      </div>
+
+      <br>
+  
+  </main>
+{% endblock %}
