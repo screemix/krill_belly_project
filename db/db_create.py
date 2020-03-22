@@ -1,9 +1,9 @@
 from pymongo import MongoClient
-import pandas as pd
 
 client = MongoClient('mongodb+srv://user:user@cluster0-ybcmn.mongodb.net/test?retryWrites=true&w=majority')
 db = client["bookshop"]
-collection = db['books']
+book_collection = db['book']
+customer_collection = db['customer']
 
 books = [
 
@@ -47,7 +47,30 @@ books = [
      'description': 'Анджей Сапковский — один из тех редких авторов, чьи произведения не просто обрели в нашей стране культовый статус, но стали частью РОССИЙСКОЙ фантастики. Более того, Сапков-ский — писатель, обладающий талантом творить АБСОЛЮТНО ОРИГИНАЛЬНЫЕ фэнтези, полностью свободные от влияния извне, однако связанные с классической мифологической тради-цией. Книги Сапковского не просто блистательны по литератур-ности формы и глубине содержания. Они являют собою картину мира — мира «меча и магии», мира искрометного юмора, не только захватывающего внимание читателя, но и трогающего его душу. Читайте сагу о Цири и Геральте!'}
 ]
 
-collection.insert_many(books)
+customer = [ {'_id': 1, 'first_name': 'Анна',  'last_name': 'Серова',
+            'book_raiting': [
+                {'book_id': 7, 'grade': 5},
+                {'book_id': 3, 'grade': 4},
+                {'book_id': 11, 'grade': 5},
+        ]
+            },
+            {'_id': 2, 'first_name': 'Василий',  'last_name': 'Павлов',
+            'book_raiting': [
+                {'book_id': 9, 'grade':5},
+                {'book_id': 8, 'grade': 4},
+        ]
+            },
+            {'_id': 3, 'first_name': 'Виктор',  'last_name': 'Семенов',
+            'book_raiting': [
+                {'book_id': 7, 'grade': 4},
+                {'book_id': 3, 'grade': 3},
+                {'book_id': 11, 'grade': 5},
+        ]
+            },
+
+]
+book_collection.insert_many(books)
+customer_collection.insert_many(customer)
 
 
 client.close()
