@@ -22,12 +22,13 @@ def preprocess_text(text):
     return text
 
 client = MongoClient('mongodb+srv://user:user@cluster0-ybcmn.mongodb.net/test?retryWrites=true&w=majority')
-cursor = client["bookshop"]["books"].aggregate(
+cursor = client["bookshop"]["book"].aggregate(
     [
         {
             "$project": {
                 "_id": 0,
                 "book_id": "$_id",
+                "title": "$title",
                 "description": "$description"
 
             }
@@ -40,13 +41,34 @@ cursor = client["bookshop"]["books"].aggregate(
     ]
 )
 
-books_descript = list(cursor)
+books = []
+for item in cursor:
+    books.append(item)
+
+cursor = client["bookshop"]["customer"].aggregate(
+    [
+        {
+            "$project": {
+                "_id": 0,
+                "id": "$_id",
+                "raiting": "$book_raiting"
+
+            }
+        },
+
+    ]
+)
+
+
+customer = []
+for item in cursor:
+    customer.append(item)
 client.close()
 
-for item in books_descript:
+for item in books:
     item['description'] = preprocess_text(item['description'])
 
-books_descript = pd.DataFrame.from_dict(books_descript)
+books_descript = pd.DataFrame.from_dict(books)
 
 tf = TfidfVectorizer(analyzer='word', ngram_range=(1, 3), min_df=0)
 tfidf_matrix = tf.fit_transform(books_descript['description'])
@@ -61,11 +83,39 @@ for idx, row in books_descript.iterrows():
 def item(id):
   return books_descript.loc[books_descript['book_id'] == id]['description'].tolist()[0].split(' - ')[0] # Just reads the results out of the dictionary.def recommend(item_id, num):
 
-def recommend(item_id, num):
-    print("Recommending " + str(num) + " products similar to " + item(item_id) + "...")
-    print("-------")
-    recs = results[item_id][:num]
-    for rec in recs:
-        print("Recommended: " + item(rec[1]) + " (score:" +      str(rec[0]) + ")")
+def recommend_book(item_id, num):
+    rec =  results[item_id][:num]
+    output = []
+    for elem in (rec):
+        output.append(elem)
+    return output
 
-recommend(item_id=11, num=5)
+def recommend_to_client(client_id):
+    cust = {}
+    for item in customer:
+        if item['id'] == client_id:
+            cust = item
+            break
+
+    best_books = []
+    for item in cust['raiting']:
+        weigth = (-1)*(3 - item['grade'])
+        if weigth > 0:
+            rec = recommend_book(item_id=item['book_id'], num=5)
+            weigthed_rec = []
+            for elem in rec:
+                weigthed_rec.append((elem[0] * weigth, elem[1]))
+            best_books = best_books + weigthed_rec
+    best_books = sorted(best_books, key=lambda tup: tup[0])
+    best_books.reverse()
+    best_books = best_books[0:3]
+    return best_books
+
+
+a = recommend_to_client(1)
+
+print('Recommended books for clients with this id:')
+for item in a:
+    for elem in books:
+        if elem['book_id'] == item[1]:
+            print('id of a book: ', elem ['book_id'], ' title: ',  elem['title'])
