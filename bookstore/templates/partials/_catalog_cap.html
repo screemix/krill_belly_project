@@ -1,0 +1,26 @@
+<header>
+
+    <br>
+    <div class="nav-scroller bg-white shadow-sm">
+        <nav class="nav nav-underline">
+          <a
+          {% if '/catalog/' == request.path %}
+          class="nav-link text-dark"
+            {%else%}
+          class="nav-link text-muted"
+            {% endif%} 
+          href="{% url 'catalog'%}">Все</a>
+          <a class="nav-link text-muted" href="#">По авторам</a>
+          <a class="nav-link text-muted" href="#">По жанрам</a>
+          <a 
+          {% if 'paper' in request.path %}
+          class="nav-link text-dark"
+            {%else%}
+          class="nav-link text-muted"
+            {% endif%} 
+          href="{% url 'catalog_paper'%}">Бумажные</a>
+          <a class="nav-link text-muted" href="#">Электронные</a>
+        </nav>
+      </div>
+
+</header>

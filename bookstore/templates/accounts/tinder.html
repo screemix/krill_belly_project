@@ -1,0 +1,112 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block content %}
+
+
+<main>
+ 
+
+    <main>
+
+      {% include 'partials/_profile_cap.html'%}
+      <br />
+      {% include 'partials/_account_panel.html'%}
+
+      <br />
+      <br />
+      <br />
+
+      <div class="container">
+        <h1>Люди с похожими вкусами</h1>
+        <br />
+        <div class="row d-flex">
+          <div class="col-lg-4 d-flex flex-column">
+            <svg
+              class="bd-placeholder-img rounded-circle"
+              width="140"
+              height="140"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+              role="img"
+              aria-label="Placeholder: 140x140"
+            >
+              <rect width="100%" height="100%" fill="#AFD132" />
+            </svg>
+            <h2>Игорь Нижинский</h2>
+            <br>
+            <h5> Вас связывают: </h5>
+              <ul class="list-unstyled">
+                <li>Ремарк Э. М.</li>
+                <li>Рембо А.</li>
+                <li>Керуак Д.</li>
+                <li>Гинзберг А.</li>
+              </ul>
+            <p>
+              <a class="btn btn-outline-secondary" href="#" role="button"
+                >К профилю &raquo;</a
+              >
+            </p>
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-4 d-flex flex-column">
+            <svg
+              class="bd-placeholder-img rounded-circle"
+              width="140"
+              height="140"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+              role="img"
+              aria-label="Placeholder: 140x140"
+            >
+              <rect width="100%" height="100%" fill="#AD7643" />
+            </svg>
+            <h2>Денис Рябов</h2>
+            <br>
+            <h5> Вас связывают: </h5>
+              <ul class="list-unstyled">
+                <li>Булгаков М.</li>
+                <li>Солженицын А.</li>
+              </ul>
+            <p>
+              <a class="btn btn-outline-secondary" href="#" role="button"
+                >К профилю &raquo;</a
+              >
+            </p>
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-4 d-flex flex-column">
+            <svg
+              class="bd-placeholder-img rounded-circle"
+              width="140"
+              height="140"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+              role="img"
+              aria-label="Placeholder: 140x140"
+            >
+              <rect width="100%" height="100%" fill="#EC7197" />
+            </svg>
+            <h2>Альбина Акбирова</h2>
+            <br>
+            <h5> Вас связывают: </h5>
+              <ul class="list-unstyled">
+                <li>Рембо А.</li>
+                <li>Карр Л.</li>
+              </ul>
+            <p>
+              <a class="btn btn-outline-secondary" href="#" role="button"
+                >К профилю &raquo;</a
+              >
+            </p>
+          </div>
+          <!-- /.col-lg-4 -->
+        </div>
+        <!-- /.row -->
+      </div>
+    </main>
+
+{% endblock %}

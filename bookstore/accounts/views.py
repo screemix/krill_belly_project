@@ -8,3 +8,6 @@ def wish_list(request):
 
 def cart(request):
     return render(request, 'accounts/cart.html')
+
+def tinder(request):
+    return render(request, 'accounts/tinder.html')

@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main>
+    {% include 'partials/_catalog_cap.html'%}
+        
+    <!--Попытка в фильтры (не работают если что)-->
+    <div class="bg-light">
+      <div class="container">
+        <div class="row">
+              <div id="filter-panel" class="collapse filter-panel">
+                  <div class="panel panel-default">
+                      <div class="panel-body">
+                          <form class="form-inline" role="form">
+                              <div class="form-group">
+                                
+                                  <label class="filter-col" style="margin-right:0;" for="pref-perpage">Книг на странице: </label>
+                                  
+                                  <select id="pref-perpage" class="form-control form-control-sm">
+                                      <option value="10">10</option>
+                                      <option selected="selected" value="20">20</option>
+                                      <option value="30">30</option>
+                                      <option value="50">50</option>
+                                  </select>      
+                                                         
+                              </div> <!-- form group [rows] -->
+                              <div class="form-group">
+                                  <label class="filter-col" style="margin-left:20;" for="pref-search">Поиск по автору:</label>
+                                  <input type="text" class="form-control input-sm" id="pref-search">
+                              </div><!-- form group [search] -->
+                              <div class="form-group">
+                                  <label class="filter-col" style="margin-left:20;" for="pref-search">Поиск по названию:</label>
+                                  <input type="text" class="form-control input-sm" id="pref-search">
+                              </div>
+                              <div class="form-group">
+                                  <label class="filter-col" style="margin-right:0;" for="pref-orderby">Сортировать:</label>
+                                  <select id="pref-orderby" class="form-control">
+                                      <option>Цена по возрастанию</option>
+                                      <option>Цена по убыванию</option>
+                                      <option>По рейтингу</option>
+                                      <option>По популярности</option>
+                                      <option>По новизне</option>
+                                  </select>                                
+                              </div> <!-- form group [order by] --> 
+                              
+                          </form>
+                      </div>
+                  </div>
+              </div>  
+        </div>  
+              <button type="button" class="btn btn-outline-dark" data-toggle="collapse" data-target="#filter-panel">
+                  <span class="glyphicon glyphicon-cog"></span> Поиск по фильтру
+              </button>
+        </div>
+      </div>
+
+    <!--Раздел популярных книг-->
+      <div class="album py-5">
+      
+          <div class="container">
+      
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                  <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#A66EE1"/></svg>
+                  <div class="card-body">
+                      <a class="text-dark" href="#"><h4>Денискины рассказы</h4></a>
+                    <p class="card-text">Драгунский В.Ю. Детская литература.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="text-muted">140 рублей</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#B0E050"/></svg>
+                    <div class="card-body">
+                      <a class="text-dark" href="#"><h4>Эмма Мухина и Тайна танцующей коровы</h4></a>
+                      <p class="card-text">Роньшин В.М. Детская литература.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                          <p class="text-muted">320 рублей</p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#D4642F"/></svg>
+                    <div class="card-body">
+                      <a class="text-dark" href="#"><h4>Самоучитель по философии</h4></a>
+                      <p class="card-text">Курпатов А.В. Психология.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                          <p class="text-muted">450 рублей</p>
+                      </div>
+                    </div>
+                </div>
+              </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#5C6FE8"/></svg>
+                        <div class="card-body">
+                          <a class="text-dark" href="#"><h4>Я ненавижу своих котов (История любви)</h4></a>
+                          <p class="card-text">Кали Д., Пиролли А. Детская литература.</p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <p class="text-muted">215 рублей</p>
+                          </div>
+                        </div>
+                    </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#75C2DC"/></svg>
+                    <div class="card-body">
+                      <a class="text-dark" href="#"><h4>Зулейха открывает глаза</h4></a>
+                      <p class="card-text">Яхина Г.Ш. Русская классическая и современная литература.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                          <p class="text-muted">380 рублей</p>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#996F3D"/></svg>
+                    <div class="card-body">
+                      <a class="text-dark" href="#"><h4>Черчилль: частная жизнь</h4></a>
+                      <p class="card-text">Медведев Д.Л. Биографии. Мемуары.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                          <p class="text-muted">580 рублей</p>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+  </main>
+
+{% endblock %}

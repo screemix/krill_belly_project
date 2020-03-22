@@ -1,7 +1,7 @@
 {% load static %}
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="{% url 'index'%}">4 ТАТАРИНА</a>
+      <a class="navbar-brand" href="{% url 'index'%}">Закладка</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -24,23 +24,47 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-items">
-            <a class="nav-link disabled" href="#">Каталог</a>
+            <a 
+            {% if 'catalog' in request.path %}
+            class="nav-link active"
+            {%else%}
+            class="nav-link disabled" 
+            {% endif%}
+            href="{% url 'catalog'%}">Каталог</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">Подборки</a>
+            <a 
+            {% if 'booklist' in request.path %}
+            class="nav-link active"
+            {%else%}
+            class="nav-link disabled" 
+            {% endif%} 
+            href="{% url 'booklist' %}">Подборки</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">Статьи и подкасты</a>
+            <a 
+            {% if 'materials' in request.path %}
+            class="nav-link active"
+            {%else%}
+            class="nav-link disabled" 
+            {% endif%}
+            href="{% url 'mat_articles' %}">Статьи и подкасты</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="{% url 'pricing' %}">Прайсинг</a>
+            <a 
+            {% if 'pricing' in request.path %}
+            class="nav-link active"
+            {%else%}
+            class="nav-link disabled" 
+            {% endif%}
+            href="{% url 'pricing' %}">Прайсинг</a>
           </li>
         </ul>
       </div>
       <div>
         <ul class="navbar-nav justify-content-end">
           <li class="nav-items">
-            <a class="nav-link" href="{% url 'selections' %}">Имя</a>
+            <a class="nav-link" href="{% url 'selections' %}">Анна Серова</a>
           </li>
           <li class="nav-items">
             <svg
@@ -57,7 +81,7 @@
             </svg>
           </li>
           <li class="nav-items">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{% url 'cart' %}">
               <img src="{% static 'img/shopping_cart.svg'%}" width="30" height="30" alt="" />
             </a>
           </li>

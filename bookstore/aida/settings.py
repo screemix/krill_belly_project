@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'books.apps.BooksConfig',
     'accounts.apps.AccountsConfig',
+    'catalogs.apps.CatalogsConfig',
+    'booklists.apps.BooklistsConfig',
+    'materials.apps.MaterialsConfig'
 ]
 
 MIDDLEWARE = [
@@ -79,7 +82,7 @@ WSGI_APPLICATION = 'aida.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'book',
+        'NAME': 'bookshop',
         'HOST': 'mongodb+srv://user:user@cluster0-ybcmn.mongodb.net/test?retryWrites=true&w=majority',
         'USER': 'user',
         'PASSWORD': 'user',

@@ -1,0 +1,147 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<br>
+<main>
+    
+    {% include 'partials/_material_cap.html'%}
+
+    <div class="container">
+    <!--тут что-то еще-->
+    <h1>Лучшие статьи</h1>
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div
+          class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+        >
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary"
+              >Проза</strong
+            >
+            <h3 class="mb-0">Солженицын и другие</h3>
+            <p class="card-text mb-auto">
+              Это просто пример штуки я вообще не знаю ничего про Солженицына.
+            </p>
+            <a href="#" class="stretched-link">Читать</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <svg
+              class="bd-placeholder-img"
+              width="200"
+              height="250"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+              role="img"
+              aria-label="Placeholder: Thumbnail"
+            >
+              <rect width="100%" height="100%" fill="#BBD333" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div
+          class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+        >
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">Поэзия</strong>
+            <h3 class="mb-0">Главное у Пушкина</h3>
+            <p class="mb-auto">
+              Произведения, которые стоит прочесть, особенно если вы их пропустили в школе.
+            </p>
+            <a href="#" class="stretched-link">Читать</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <svg
+              class="bd-placeholder-img"
+              width="200"
+              height="250"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+              role="img"
+              aria-label="Placeholder: Thumbnail"
+            >
+              <rect width="100%" height="100%" fill="#78ABD8" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--все подборки-->
+  <div class="container marketing">
+    <h1>Все статьи</h1>
+    <br />
+    <div class="row d-flex">
+      <div class="col-lg-4">
+        <svg
+          class="bd-placeholder-img rectangle"
+          width="200"
+          height="200"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="xMidYMid slice"
+          focusable="false"
+          role="img"
+          aria-label="Placeholder: 140x140"
+        >
+          <rect width="100%" height="100%" fill="#AFD132" />
+        </svg>
+        <h2>Быть или не быть? Секреты Уильяма Шекспира</h2>
+        <p>
+          <a class="btn btn-outline-secondary" href="#" role="button"
+            >Читать &raquo;</a
+          >
+        </p>
+      </div>
+      <!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg
+          class="bd-placeholder-img rectangle"
+          width="200"
+          height="200"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="xMidYMid slice"
+          focusable="false"
+          role="img"
+          aria-label="Placeholder: 140x140"
+        >
+          <rect width="100%" height="100%" fill="#A54726" />
+        </svg>
+        <h2>Какое небо было в "Мастере и Маргарите"?</h2>
+        <p>
+          <a class="btn btn-outline-secondary" href="#" role="button"
+            >Читать &raquo;</a
+          >
+        </p>
+      </div>
+      <!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg
+          class="bd-placeholder-img rectangle"
+          width="200"
+          height="200"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="xMidYMid slice"
+          focusable="false"
+          role="img"
+          aria-label="Placeholder: 140x140"
+        >
+          <rect width="100%" height="100%" fill="#C73E4A" />
+        </svg>
+        <h2>Почему мы любим читать</h2>
+        <p>
+          <a class="btn btn-outline-secondary" href="#" role="button"
+            >Читать &raquo;</a
+          >
+        </p>
+      </div>
+      <!-- /.col-lg-4 -->
+    </div>
+  </div>
+  <br>
+  </main>
+
+{% endblock %}

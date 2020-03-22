@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="nav nav-tabs">
+      <nav class="nav d-flex justify-content-between">
+        <a 
+        {% if 'articles' in request.path %}
+        class=" nav-link active p-3"
+            {%else%}
+            class="p-3 text-muted" 
+            {% endif%}
+        href="{% url 'mat_articles'%}">Статьи</a>
+        <a 
+        {% if 'podcasts' in request.path %}
+        class=" nav-link active p-3"
+            {%else%}
+            class="p-3 text-muted" 
+            {% endif%}
+        href="{% url 'mat_podcasts'%}">Подкасты</a>
+      </nav>
+    </div>
+  </div>

@@ -26,6 +26,15 @@
             {% endif%} href="{% url 'cart'%}"
           >Моя корзина</a
         >
+
+        <a 
+            {% if 'tinder' in request.path %}
+            class="nav-link active p-3"
+            {%else%}
+            class="p-3 text-muted" 
+            {% endif%} href="{% url 'tinder'%}"
+          >Товарищеский Тиндер</a
+        >
       </nav>
     </div>
   </div>

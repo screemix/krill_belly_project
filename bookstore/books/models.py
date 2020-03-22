@@ -7,5 +7,6 @@ class Book(models.Model):
     date_of_release = models.DateTimeField(default = datetime.now, blank=True)
     description = models.TextField(blank=True)
     genre = models.CharField(max_length=200, default = 'Роман')
+    cost = models.IntegerField(default=500)
     def __str__(self):
         return self.title
