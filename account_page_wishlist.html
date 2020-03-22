@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Best bookshop</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="index.html">4 ТАТАРИНА</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <form class="form-inline mt-2 mt-md-0">
+          <input
+            class="form-control mr-sm-2"
+            type="text"
+            placeholder="Поиск"
+            aria-label="Search"
+          />
+        </form>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-items">
+              <a class="nav-link disabled" href="catalog.html">Каталог</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="booklists.html">Подборки</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="materials.html">Статьи и подкасты</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="pricing.html">Прайсинг</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul class="navbar-nav justify-content-end">
+            <li class="nav-items">
+              <a class="nav-link active" href="#">Анна Серова</a>
+            </li>
+            <li class="nav-items">
+              <svg
+                class="bd-placeholder-img rounded-circle"
+                width="40"
+                height="40"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+                role="img"
+              >
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#FFFFFF" />
+              </svg>
+            </li>
+            <li class="nav-items">
+              <a class="nav-link" href="account_page_cart.html">
+                <img src="/shopping_cart.svg" width="30" height="30" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <br />
+    <br />
+
+    <main>
+      <br />
+      <br />
+
+      <!--шапка профиля-->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            <svg
+              class="bd-placeholder-img rounded-circle"
+              width="200"
+              height="200"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+              role="img"
+              aria-label="Placeholder: 140x140"
+            >
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#777" />
+            </svg>
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-3 justify-content-center align-self-center">
+            <h1>Анна Серова</h1>
+            <h5>Люблю военную прозу и писателей-битников</h5>
+            <p>
+              <a class="badge badge-light" href="#"
+                ><img
+                  src="/edit.svg"
+                  width="20"
+                  height="20"
+                  alt=""
+                />Редактировать</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    
+
+    <br />
+
+    <div class="container">
+      <div class="nav nav-tabs">
+        <nav class="nav d-flex justify-content-between">
+          <a class="p-3 text-muted" href="account_page_lists.html">Мои подборки</a>
+          <a class="nav-link active p-3" href="account_page_wishlist.html">Список желаний</a>
+          <a class="p-3 text-muted" href="account_page_cart.html">Моя корзина</a>
+          <a class="p-3 text-muted" href="account_page_tinder.html">Товарищеский тиндер</a>
+        </nav>
+      </div>
+    </div>
+
+    <!--список книг-->
+    <div class="album py-5">
+        
+        <div class="container">
+    
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#A66EE1"/></svg>
+                <div class="card-body">
+                    <a class="text-dark" href="#"><h4>Денискины рассказы</h4></a>
+                  <p class="card-text">Драгунский В.Ю. Детская литература.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                      <p class="text-muted">140 рублей</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                  <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#B0E050"/></svg>
+                  <div class="card-body">
+                    <a class="text-dark" href="#"><h4>Эмма Мухина и Тайна танцующей коровы</h4></a>
+                    <p class="card-text">Роньшин В.М. Детская литература.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="text-muted">320 рублей</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                  <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#D4642F"/></svg>
+                  <div class="card-body">
+                    <a class="text-dark" href="#"><h4>Самоучитель по философии</h4></a>
+                    <p class="card-text">Курпатов А.В. Психология.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="text-muted">450 рублей</p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+              <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                      <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#5C6FE8"/></svg>
+                      <div class="card-body">
+                        <a class="text-dark" href="#"><h4>Я ненавижу своих котов (История любви)</h4></a>
+                        <p class="card-text">Кали Д., Пиролли А. Детская литература.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <p class="text-muted">215 рублей</p>
+                        </div>
+                      </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <br />
+
+    <footer class="footer pt-2 bg-light">
+      <div class="container">
+        <div class="row justify-content-start">
+          <div class="col-4">
+            <h5>Контакты</h5>
+            <ul class="list-unstyled text-small">
+              <li>
+                <a class="text-muted" href="#"
+                  >Почта: tatarskayapochta@tatmail.tat</a
+                >
+              </li>
+              <li>
+                <a class="text-muted" href="#">Телефон: 8 (999) 999-99-99</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
